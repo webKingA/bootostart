@@ -20,21 +20,6 @@ html {
   direction: rtl;
 }
 
-.open--sidebar {
-  overflow: hidden;
-  position: fixed;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  inset: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-tap-highlight-color: transparent;
-  z-index: -1;
-  transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-}
-
 body {
   background-color: #fcfcfc;
 }
@@ -42,6 +27,10 @@ body {
 .width-lg {
   width: 75%;
   margin: auto;
+}
+
+section {
+  padding-top: 4rem !important;
 }
 
 @media screen and (max-width: 1200px) {

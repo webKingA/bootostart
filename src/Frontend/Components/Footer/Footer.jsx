@@ -8,7 +8,7 @@ import { BsInstagram } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <section className="footer">
       <div className="width-lg footer__container">
         <div className="one__footer">
           <div className="top__one__footer">
@@ -60,6 +60,6 @@ export default function Footer() {
         </div>
       </div>
       <p>ساخته شده با ❤️ در بوتواستارت</p>
-    </div>
+    </section>
   );
 }

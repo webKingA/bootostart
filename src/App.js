@@ -12,7 +12,7 @@ export default function App() {
   // Context End
 
   return (
-    <div className={barsState == false ? 'app' : 'app open--sidebar'}>
+    <div className='app'>
       <Context.Provider value={{ barsState, setBarsState }}>
         {Routes}
       </Context.Provider>

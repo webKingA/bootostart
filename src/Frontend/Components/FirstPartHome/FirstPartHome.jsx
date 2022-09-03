@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function FirstPartHome() {
   return (
-    <div className="first__part__home width-lg">
+    <section className="first__part__home width-lg">
       <div className="one__first__part__home">
         <h1>آموزش برنامه نویسی با بوتواستارت</h1>
         <p>
@@ -20,6 +20,6 @@ export default function FirstPartHome() {
       <div className="two__first__part__home">
         <img src="./images/banner.webp" alt="" />
       </div>
-    </div>
+    </section >
   );
 }
