@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import Header from '../../Components/Header/Header';
 import FirstPartHome from '../../Components/FirstPartHome/FirstPartHome';
+import NewsHome from '../../Components/NewsHome/NewsHome';
 import Footer from '../../Components/Footer/Footer';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     <section className="page__home">
       <Header />
       <FirstPartHome />
+      <NewsHome />
       {/* <Footer /> */}
     </section>
   );
