@@ -76,5 +76,10 @@
     .slider__container {
         width: 98%;
         margin: auto;
+        font-size: .7rem;
+        height: 200px;
+    }
+    .slider__icons {
+      margin-top: 10px;
     }
 }

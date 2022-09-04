@@ -1,0 +1,132 @@
+.comments__home {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.comments__home__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: kalameh;
+    width: 500px;
+}
+
+.comment__student__home__top {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.comment__student__home__top__img {
+    background-color: #BDBDBD;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.comment__student__home__top__img > svg {
+    font-size: 40px;
+    color: #fff;
+}
+
+.comment__student__home__top__text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.comment__student__home__top__text > p {
+    color: #1E1730;
+}
+
+.comment__student__home__top__text > small {
+    color: #656565;
+    font-family: sans;
+}
+
+.comment__student__home__mid {
+    margin-top: 2rem;
+}
+
+.comment__student__home__mid > p {
+    color: #1E1730;
+    font-family: sans;
+}
+
+.comment__student__home__down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.comment__student__home__down__right {
+    background-color: #E8EAF6;
+    padding: .6rem 1.5rem;
+    border-radius: 16px;
+}
+
+.comment__student__home__down__right > a {
+    color: #7E57C2;
+    cursor: pointer;
+}
+
+.comment__student__home__down__right > a:hover {
+    color: #7E57C2;
+}
+
+.comment__student__home__down__left > svg {
+    color: #7E57C2;
+    font-size: 28px;
+    cursor: pointer;
+    margin: 0 .2rem;
+}
+
+.comments__home__vid {
+    margin-top: 4rem;
+}
+
+.vid__student__home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  margin-left: 30px;
+}
+
+.vid__student__home > video {
+  position: relative;
+  width: 450px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width : 1050px) {
+    .comments__home {
+        flex-direction: column;
+    }
+    .comments__home__text {
+        width: 100%;
+    }
+    .vid__student__home {
+        justify-content: center;
+        margin-left: 0px;
+    }
+    .comments__home__vid {
+        margin: auto;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .vid__student__home > video {
+        width: 85%;
+    }
+}
