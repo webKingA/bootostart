@@ -1,0 +1,85 @@
+.all__courses {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 6rem;
+    font-family: kalameh;
+}
+
+.courses__top__text__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courses__top__text > p {
+    font-size: 1.5rem;
+    color: #212121;
+}
+
+.courses__top__filter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.courses__top__filter__container {
+    background-color: #CDCDCD;
+    width: 4.5rem;
+    height: 2rem;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.courses__top__filter__ball {
+    background-color: #433B51;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    cursor: pointer;
+}
+
+.ball__on__container {
+    background-color: #BDA9DF;
+}
+
+.ball__on {
+    background: #7E57C2;
+    right: 5px;
+}
+
+.courses__top__filter > p {
+    color: #212121;
+}
+
+.courses__datas__contaier {
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  gap: 3rem 2rem;
+}
+
+@media screen and (max-width : 1100px) {
+    .courses__datas__contaier {
+        grid-template-columns: repeat(3 , 1fr);
+    }
+}
+
+@media screen and (max-width : 750px) {
+    .courses__datas__contaier {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .courses__top__text__filter {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+    .courses__datas__contaier {
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}
