@@ -5,6 +5,7 @@ import FirstPartHome from '../../Components/FirstPartHome/FirstPartHome';
 import NewsHome from '../../Components/NewsHome/NewsHome';
 import ThreePartHome from '../../Components/ThreePartHome/ThreePartHome';
 import CommentsHome from '../../Components/CommentsHome/CommentsHome';
+import FivePartHome from '../../Components/FivePartHome/FivePartHome';
 import Footer from '../../Components/Footer/Footer';
 
 export default function Home() {
@@ -15,7 +16,8 @@ export default function Home() {
       <NewsHome />
       <ThreePartHome />
       <CommentsHome />
-      {/* <Footer /> */}
+      <FivePartHome />
+      <Footer />
     </div>
   );
 }
