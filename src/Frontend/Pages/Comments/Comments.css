@@ -1,0 +1,102 @@
+.comments__page__all {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #656565;
+  padding-bottom: 4rem;
+  font-family: kalameh;
+  padding-top: 6rem;
+}
+
+.comments__page__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 500px;
+}
+
+.comment__student__page__top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.comment__student__page__top__img {
+  background-color: #bdbdbd;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.comment__student__page__top__img > svg {
+  font-size: 40px;
+  color: #fff;
+}
+
+.comment__student__page__top__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comment__student__page__top__text > p {
+  color: #1e1730;
+}
+
+.comment__student__page__top__text > small {
+  color: #656565;
+  font-family: sans;
+}
+
+.comment__student__page__mid {
+  margin-top: 2rem;
+}
+
+.comment__student__page__mid > p {
+  color: #1e1730;
+  font-family: sans;
+}
+
+.vid__student__page {
+  width: 500px;
+  margin-top: 4rem;
+}
+
+.vid__student__page > video {
+  width: 100%;
+  border-radius: 20px;
+}
+
+@media screen and (max-width : 1050px) {
+    .comments__page__all {
+        flex-direction: column;
+    }
+    .comments__page__text {
+        width: 100%;
+    }
+    .vid__student__page {
+        justify-content: center;
+        margin-left: 0px;
+    }
+    .comments__page__vid {
+        margin: auto;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .vid__student__page {
+        width: 100%;
+        margin: auto;
+    }
+    .comment__student__page__mid > p , .comment__student__page__top__text > small , .comment__student__page__top__text > p {
+        font-size: .8rem;
+    }
+    .comment__student__page__top__img > svg {
+        font-size: 30px;
+    }
+    .comments__page__all {
+        padding-bottom: 2rem;
+    }
+}
