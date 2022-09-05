@@ -128,4 +128,8 @@
         justify-content: unset;
         gap: 1rem;
     }
+
+    .top__one__footer {
+        flex-direction: column;
+    }
 }

@@ -1,0 +1,28 @@
+.about__page__all__text {
+    font-family: kalameh;
+    margin-top: 10rem;
+}
+
+.about__page__all__text > div {
+    margin: 3rem 0;
+}
+
+.about__page__all__text > div h4 {
+    margin-bottom: 1rem;
+}
+
+.about__page__all__text > div p {
+    color: #656565;
+    font-family: sans;
+}
+
+.about__page__two > div > span {
+    background-color: #EEEEEE;
+    color: #616164;
+    padding: .2rem .6rem;
+}
+
+.about__page__two > div p {
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+}
