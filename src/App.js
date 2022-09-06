@@ -9,11 +9,25 @@ export default function App() {
 
   // Context Start
   const [barsState, setBarsState] = useState(false);
+  const [shopDatas , setShopDatas] = useState([]);
+  const [indexShop , setIndexShop] = useState(0);
+  const [shopPrice , setShopPrice] = useState(0);
   // Context End
 
   return (
-    <div className='app'>
-      <Context.Provider value={{ barsState, setBarsState }}>
+    <div className="app">
+      <Context.Provider
+        value={{
+          barsState,
+          setBarsState,
+          shopDatas,
+          setShopDatas,
+          indexShop,
+          setIndexShop,
+          shopPrice,
+          setShopPrice,
+        }}
+      >
         {Routes}
       </Context.Provider>
     </div>

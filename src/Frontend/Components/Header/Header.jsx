@@ -36,6 +36,9 @@ export default function Header() {
         </div>
         <div className="header__icons">
           <Link to={"/cart"}>
+            {contextAll.indexShop !== 0 && (
+              <span>{contextAll.indexShop}</span>
+            )}
             <AiOutlineShoppingCart />
           </Link>
           <Link to={"/dashboard"}>

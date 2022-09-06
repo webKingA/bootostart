@@ -1,11 +1,12 @@
-import React , {useState} from "react";
+import React, { useState, useContext } from "react";
 import "./NewsHome.css";
 import { Link } from "react-router-dom";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { IoMdSchool } from "react-icons/io";
+import Context from "../../../Context";
+const Swal = require("sweetalert2");
 
 export default function NewsHome() {
-
   let [datas, setDatas] = useState([
     {
       id: 1,
@@ -14,8 +15,9 @@ export default function NewsHome() {
       p1: "۲۵ ساعت",
       span: "۱۵۰ نفر",
       p2: "",
-      p3: "۱,۵۸۹,۰۰۰ تومان",
+      p3: "۱,۵۸۹,۰۰۰",
       p4: "",
+      p5 : '1589000'
     },
     {
       id: 2,
@@ -24,8 +26,9 @@ export default function NewsHome() {
       p1: "۵۰ ساعت",
       span: "۵۶۴ نفر",
       p2: "",
-      p3: "۲,۳۹۸,۰۰۰ تومان",
+      p3: "۲,۳۹۸,۰۰۰",
       p4: "",
+      p5 : '2398000'
     },
     {
       id: 3,
@@ -34,8 +37,9 @@ export default function NewsHome() {
       p1: "۴۰ ساعت",
       span: "۲۰۰۱ نفر",
       p2: "",
-      p3: "۲,۲۹۸,۰۰۰ تومان",
+      p3: "۲,۲۹۸,۰۰۰",
       p4: "",
+      p5 : '2298000'
     },
     {
       id: 4,
@@ -44,8 +48,9 @@ export default function NewsHome() {
       p1: "۲۵ ساعت",
       span: "۲۵۴۰ نفر",
       p2: "",
-      p3: "۱,۳۲۹,۰۰۰ تومان",
+      p3: "۱,۳۲۹,۰۰۰",
       p4: "",
+      p5 : '1329000'
     },
     {
       id: 5,
@@ -54,8 +59,9 @@ export default function NewsHome() {
       p1: "۱۷ ساعت",
       span: "۲۳۵۲ نفر",
       p2: "",
-      p3: "۴۲۹,۰۰۰ تومان",
+      p3: "۴۲۹,۰۰۰",
       p4: "",
+      p : '429000'
     },
     {
       id: 6,
@@ -66,6 +72,7 @@ export default function NewsHome() {
       p2: "",
       p3: "رایگان",
       p4: "",
+      p5 : 'free'
     },
     {
       id: 7,
@@ -74,8 +81,9 @@ export default function NewsHome() {
       p1: "۲/۵ ساعت",
       span: "۱۹۸۳ نفر",
       p2: "",
-      p3: "۲۱۹,۰۰۰ تومان",
+      p3: "۲۱۹,۰۰۰",
       p4: "",
+      p5 : '219000'
     },
     {
       id: 8,
@@ -86,8 +94,11 @@ export default function NewsHome() {
       p2: "",
       p3: "رایگان",
       p4: "",
+      p5 : 'free'
     },
   ]);
+
+  let contextAll = useContext(Context);
 
   return (
     <section className="news__home width-lg">
@@ -110,16 +121,41 @@ export default function NewsHome() {
                 <span>{item.span}</span>
               </div>
               <div className="price__course">
-                <p className={item.p2.length == 0 ? "hide" : "off__price__course"}>
+                <p
+                  className={
+                    item.p2.length == 0 ? "hide" : "off__price__course"
+                  }
+                >
                   {item.p2}
                 </p>
-                <p className="last__price__course">{item.p3}</p>
+                <p className="last__price__course">{item.p3} تومان</p>
                 <p className="new__price__course">{item.p4}</p>
               </div>
             </div>
             <hr />
             <div className="buttons__course">
-              <button>ثبت نام</button>
+              <button
+                onClick={() => {
+                  let newCourse = {
+                    id: item.id,
+                    img: item.img,
+                    title: item.h5,
+                    price: item.p5,
+                  };
+                  Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "دوره مورد نظر به سبد خرید اضافه شد",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                  contextAll.setShopDatas((prev) => [...prev, newCourse]);
+                  contextAll.setShopPrice((prev) => prev + +item.p5)
+                  contextAll.setIndexShop((prev) => prev + 1)
+                }}
+              >
+                ثبت نام
+              </button>
               <Link to={`/courses`}>مشاهده دوره</Link>
             </div>
           </div>
